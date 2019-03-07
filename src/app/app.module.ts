@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClient,HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './menubar/menubar.component';
@@ -10,6 +10,8 @@ import { OfficesComponent } from './routes/offices/offices.component';
 import { VideosComponent } from './routes/videos/videos.component';
 import { OffersComponent } from './routes/offers/offers.component';
 import { VirtualclassesComponent } from './routes/virtualclasses/virtualclasses.component';
+import { CourseComponent } from './routes/home/course/course.component';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +22,17 @@ import { VirtualclassesComponent } from './routes/virtualclasses/virtualclasses.
     OfficesComponent,
     VideosComponent,
     OffersComponent,
-    VirtualclassesComponent
+    VirtualclassesComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

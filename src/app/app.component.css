@@ -1,0 +1,17 @@
+#container{
+    overflow: hidden;
+}
+
+#main-area{
+    background-color: whitesmoke;
+    width: 75%;
+    float: left;
+    min-height: 800px;
+}
+
+#sidebar{
+    min-height: 800px;
+    background-color: rgb(27, 25, 25);
+    float: left;
+    width: 23%;
+}
