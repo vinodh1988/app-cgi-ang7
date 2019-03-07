@@ -2,10 +2,10 @@
   <img class="card-img-top" 
   src="http://162.241.222.49:8894/rest-api/images/{{current.filename}}" alt="Card image" style="width:100%">
   <div class="card-body">
-    <h4 class="card-title">{{current.modulename}}</h4>
+    <h4 class="card-title">{{current.modulename | uppercase}}</h4>
     <p class="card-text">{{current.description}}</p>
-   <h5>Price :: {{current.price}} </h5>
-  
+   <h5>Price :: <del>{{current.price | currency:"INR"}} </del> {{current.price | discount}}</h5>
+  <h6 [style.color]="'green'">discounted price: {{current.price |discountprice}}</h6>
    <h6>Duraton:: {{current.duration}}</h6>
   </div>
 </div>

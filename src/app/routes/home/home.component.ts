@@ -9,6 +9,7 @@ import { course } from 'src/app/model/course';
 })
 export class HomeComponent implements OnInit {
 private courselist:course[]=[];
+private prange:string='d';
   constructor(private cs:CourseService) {
       this.cs.getCourses().subscribe(
         (data:course[])=>{this.courselist=data},

@@ -1,1 +1,9 @@
-<app-course *ngFor="let n of courselist" [course]="n"></app-course>
+<select [(ngModel)]="prange">
+  <option value="a">&gt;24000</option>
+  <option value="b">20000-24000</option>
+  <option value="c">&lt;20000</option>
+  <option value="d">All Courses</option>
+</select>
+
+<br>
+<app-course *ngFor="let n of courselist |filtercourse:prange" [course]="n"></app-course>
